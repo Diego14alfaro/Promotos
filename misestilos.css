@@ -1,12 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
 
 :root {
   --main-white-color: #fff;
-  --main-black-color: black;
-  --main-green-color: #98DFC6;
-  --main-blue-color: #128ef2;
   --main-grey-color: #f2f2f2;
+  --main-black-color: black;
+  --main-green-color: #00CDAF;
+  --main-blue-color: #128ef2;
+  --second-dark-color: #272727;
+  --second-grey-color: #8f8f8f;
 }
+
+
 
 * {
   padding: 0;
@@ -131,11 +136,12 @@ h1{
   -webkit-box-flex: 1;
           flex-grow: 1;
   min-height: 550px;
-  background: var(--main-green-color)
+  background:var(--main-green-color)
     url("img/Portada.jpeg") no-repeat
     center / cover;
   background-blend-mode: luminosity;
   color: var(--main-white-color);
+  font-weight: bold;
 }
 
 .page-jumbo div {
@@ -150,6 +156,35 @@ h1{
   margin-top: 10px;
 }
 
+/*ASIDE*/
+.page-aside {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  min-height: 400px;
+  background: 
+    url("img/harley-2430193_1920\ \(1\).jpg") no-repeat
+    center / cover;
+  color: white;
+}
+
+.page-aside div {
+  max-width: 500px;
+}
+
+.page-aside h1 {
+  margin-bottom: 20px;
+}
+
+.page-aside p + p {
+  margin-top: 10px;
+}
 
 /* FOOTER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -159,7 +194,15 @@ h1{
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
           flex-direction: column-reverse;
-  background: var(--main-white-color);
+  background: var(--second-dark-color);
+  color: var(--second-grey-color);
+  justify-content: center;
+}
+.page-footer a{
+  color: var(--main-green-color);
+}
+.page-footer a:hover {
+  color: #8f8f8f;
 }
 
 .page-footer ul {
@@ -171,6 +214,24 @@ h1{
 
 .page-footer ul li:not(:last-child) {
   margin-right: 20px;
+}
+
+.page-footer-container {
+  font-weight: 300;
+  width: 50%;
+  padding: 2em 0;
+}
+
+.page-footer-container p {
+  font-size: 0.8em;
+}
+.page-footer-container i {
+  font-size: 1.5em;
+  padding: 0.8em 0.1em;
+}
+.page-footer-container i:hover {
+  color: var(--main-green-color);
+  
 }
 
 
@@ -192,7 +253,7 @@ h1{
     -webkit-box-direction: normal;
             flex-direction: row;
     -webkit-box-pack: justify;
-            justify-content: space-between;
+            justify-content: center;
     -webkit-box-align: center;
             align-items: center;
   }
@@ -200,7 +261,7 @@ h1{
   .page-footer ul {
     margin-bottom: 0;
   }
-}
+
 
 /* Flexbox */
 .row {
@@ -251,4 +312,5 @@ h1{
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
+}
 }
